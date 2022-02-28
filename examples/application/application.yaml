@@ -1,13 +1,13 @@
-apiVersion: application.azuread.jet.crossplane.io/v1alpha1
+apiVersion: azuread.azuread.jet.crossplane.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-crossplane
+  name: azuread-application
+  annotations:
+    crossplane.io/external-name: my-special-db
 spec:
   forProvider:
-    description: "Managed with Crossplane AzureAD Provider (generated with Terrajet)"
-    visibility: public
-    template:
-      - owner: ajwgroup
-        repository: provider-jet-azuread
+    displayName: test_application
+    lifecycle:
+      name: test
   providerConfigRef:
-    name: default
+    name: azuread-creds-next

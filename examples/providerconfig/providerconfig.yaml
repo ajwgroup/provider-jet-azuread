@@ -1,11 +1,11 @@
 apiVersion: azuread.jet.crossplane.io/v1alpha1
 kind: ProviderConfig
 metadata:
-  name: default
+  name: azuread-creds
 spec:
   credentials:
     source: Secret
     secretRef:
-      name: example-creds
+      name: azuread-creds
       namespace: crossplane-system
       key: credentials
