@@ -1,13 +1,9 @@
-apiVersion: azuread.azuread.jet.crossplane.io/v1alpha1
+apiVersion: application.azuread.jet.crossplane.io/v1alpha1
 kind: Application
 metadata:
   name: azuread-application
-  annotations:
-    crossplane.io/external-name: my-special-db
 spec:
   forProvider:
-    displayName: test_application
-    lifecycle:
-      name: test
+    displayName: azuread-application
   providerConfigRef:
     name: azuread-creds

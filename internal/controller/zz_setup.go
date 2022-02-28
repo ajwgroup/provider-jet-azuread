@@ -21,7 +21,7 @@ import (
 
 	"github.com/crossplane/terrajet/pkg/controller"
 
-	application "github.com/crossplane-contrib/provider-jet-azuread/internal/controller/azuread/application"
+	application "github.com/crossplane-contrib/provider-jet-azuread/internal/controller/application/application"
 	providerconfig "github.com/crossplane-contrib/provider-jet-azuread/internal/controller/providerconfig"
 )
 

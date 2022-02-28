@@ -1,4 +1,4 @@
-package branch
+package application
 
 import "github.com/crossplane/terrajet/pkg/config"
 

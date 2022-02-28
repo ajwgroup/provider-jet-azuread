@@ -50,7 +50,7 @@ func GetProvider() *tjconfig.Provider {
 
 	for _, configure := range []func(provider *tjconfig.Provider){
 		// add custom config functions
-		application.Configure
+		application.Configure,
 	} {
 		configure(pc)
 	}
