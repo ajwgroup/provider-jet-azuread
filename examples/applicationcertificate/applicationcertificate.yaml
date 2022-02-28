@@ -1,0 +1,9 @@
+apiVersion: applicationcertificate.azuread.jet.crossplane.io/v1alpha1
+kind: Certificate
+metadata:
+  name: azuread-application-certificate
+spec:
+  forProvider:
+    applicationObjectId: ""
+  providerConfigRef:
+    name: azuread-creds

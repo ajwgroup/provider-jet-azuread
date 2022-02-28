@@ -22,6 +22,8 @@ import (
 	"github.com/crossplane/terrajet/pkg/controller"
 
 	application "github.com/crossplane-contrib/provider-jet-azuread/internal/controller/application/application"
+	certificate "github.com/crossplane-contrib/provider-jet-azuread/internal/controller/applicationcertificate/certificate"
+	password "github.com/crossplane-contrib/provider-jet-azuread/internal/controller/applicationpassword/password"
 	providerconfig "github.com/crossplane-contrib/provider-jet-azuread/internal/controller/providerconfig"
 )
 
@@ -30,6 +32,8 @@ import (
 func Setup(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
 		application.Setup,
+		certificate.Setup,
+		password.Setup,
 		providerconfig.Setup,
 	} {
 		if err := setup(mgr, o); err != nil {

@@ -23,6 +23,8 @@ import (
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/crossplane-contrib/provider-jet-azuread/config/application"
+	"github.com/crossplane-contrib/provider-jet-azuread/config/applicationpassword"
+	"github.com/crossplane-contrib/provider-jet-azuread/config/applicationcertificate"
 )
 
 const (
@@ -46,11 +48,15 @@ func GetProvider() *tjconfig.Provider {
 		tjconfig.WithDefaultResourceFn(defaultResourceFn),
 		tjconfig.WithIncludeList([]string{
 			"azuread_application$",
+			"azuread_application_password$",
+			"azuread_application_certificate$",
 		}))
 
 	for _, configure := range []func(provider *tjconfig.Provider){
 		// add custom config functions
 		application.Configure,
+		applicationpassword.Configure,
+		applicationcertificate.Configure,
 	} {
 		configure(pc)
 	}

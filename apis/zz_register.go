@@ -23,6 +23,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 
 	v1alpha1 "github.com/crossplane-contrib/provider-jet-azuread/apis/application/v1alpha1"
+	v1alpha1applicationcertificate "github.com/crossplane-contrib/provider-jet-azuread/apis/applicationcertificate/v1alpha1"
+	v1alpha1applicationpassword "github.com/crossplane-contrib/provider-jet-azuread/apis/applicationpassword/v1alpha1"
 	v1alpha1apis "github.com/crossplane-contrib/provider-jet-azuread/apis/v1alpha1"
 )
 
@@ -30,6 +32,8 @@ func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1applicationcertificate.SchemeBuilder.AddToScheme,
+		v1alpha1applicationpassword.SchemeBuilder.AddToScheme,
 		v1alpha1apis.SchemeBuilder.AddToScheme,
 	)
 }
