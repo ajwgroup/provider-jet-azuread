@@ -2,7 +2,7 @@ package applicationcertificate
 
 import "github.com/crossplane/terrajet/pkg/config"
 
-// Configuration for Certificate
+// Configure : Provider Configuration
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azuread_application_certificate", func(r *config.Resource) {
 

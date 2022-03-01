@@ -2,7 +2,7 @@ package application
 
 import "github.com/crossplane/terrajet/pkg/config"
 
-// Configuration for Application
+// Configure : Provider Configuration
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azuread_application", func(r *config.Resource) {
 
