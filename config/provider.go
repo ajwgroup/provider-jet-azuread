@@ -20,11 +20,11 @@ import (
 	// Note(turkenh): we are importing this to embed provider schema document
 	_ "embed"
 
+	"github.com/crossplane-contrib/provider-jet-azuread/config/application"
+	"github.com/crossplane-contrib/provider-jet-azuread/config/applicationcertificate"
+	"github.com/crossplane-contrib/provider-jet-azuread/config/applicationpassword"
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/crossplane-contrib/provider-jet-azuread/config/application"
-	"github.com/crossplane-contrib/provider-jet-azuread/config/applicationpassword"
-	"github.com/crossplane-contrib/provider-jet-azuread/config/applicationcertificate"
 )
 
 const (
