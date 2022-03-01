@@ -2,6 +2,7 @@ package applicationpassword
 
 import "github.com/crossplane/terrajet/pkg/config"
 
+// Configuration for Password
 func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("azuread_application_password", func(r *config.Resource) {
 
