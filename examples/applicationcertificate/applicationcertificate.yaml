@@ -4,6 +4,13 @@ metadata:
   name: azuread-application-certificate
 spec:
   forProvider:
-    applicationObjectId: ""
+    applicationObjectId: "000000-0000-0000-0000-000000000000"
+    endDate: "2027-03-08T10:17:57Z"
+    type: "AsymmetricX509Cert"
+    encoding: "pem"
+    valueSecretRef:
+      name: "azuread-application-certificate"
+      namespace: "crossplane-system"
+      key: "pem"
   providerConfigRef:
     name: azuread-creds
