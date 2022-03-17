@@ -50,7 +50,7 @@ GO111MODULE = on
 # ====================================================================================
 # Setup Images
 
-DOCKER_REGISTRY ?= crossplane
+DOCKER_REGISTRY ?= ajwportalteam
 IMAGES = provider-jet-azuread provider-jet-azuread-controller
 -include build/makelib/image.mk
 
