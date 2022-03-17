@@ -11,7 +11,7 @@ export TERRAFORM_PROVIDER_VERSION := 2.18.0
 export TERRAFORM_PROVIDER_DOWNLOAD_NAME := terraform-provider-azuread
 export TERRAFORM_PROVIDER_DOWNLOAD_URL_PREFIX := https://releases.hashicorp.com/terraform-provider-azuread/2.18.0
 
-PLATFORMS ?= linux_amd64 linux_arm64
+PLATFORMS ?= linux_amd64
 
 # -include will silently skip missing files, which allows us
 # to load those files with a target in the Makefile. If only
